@@ -1,0 +1,55 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-animation
+{
+    background-color: white;
+    height: 100px;
+    width: 200%;
+    position: relative;
+    top: -300px;
+    right: 200px;
+    z-index: -1;
+    animation: round 5000ms linear infinite;
+    border-radius: 10px;
+}
+@keyframes round {
+    0%
+    {
+        transform: rotate(0deg);
+        opacity: 0.5;
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.image
+{
+    background-image: url("../images.jpeg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    box-shadow: inset 0px 3px 100px black;
+    border: inset ;
+    offset: 5px;
+}
+.animation:hover
+{
+    animation: moveup 6s ease;
+}
+@keyframes moveup{
+    0%
+    {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
